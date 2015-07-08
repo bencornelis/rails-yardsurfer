@@ -21,7 +21,8 @@
 <ul>
   <% @listing.reviews.each do |review| %>
     <li><%= review.text %>
-      <%= image_tag current_user.avatar.url(:thumb) %>
+      <%= image_tag review.user.avatar.url(:thumb) %>
+      <%= review.user.name %>
       <% review.rating.times do %>
         <span class="glyphicon glyphicon-star rating"></span>
       <% end %>
