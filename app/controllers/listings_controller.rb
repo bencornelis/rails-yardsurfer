@@ -1,5 +1,5 @@
 class ListingsController < ApplicationController
-  before_filter :authenticate_user!, except: [:index]
+  before_filter :authenticate_user!, except: [:index, :show]
 
   def index
     @listings = Listing.all
@@ -22,6 +22,7 @@ class ListingsController < ApplicationController
 
   private
   def listing_params
-    params.require(:listing).permit(:name, :location)
+    params.require(:listing).permit(:name, :location, :image, :description,
+    :price, :guest_number, :toilet, :shower, :outlet, :pets)
   end
 end

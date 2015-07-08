@@ -37,6 +37,7 @@
         1,
         1,
         null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/airbnb/spec/rails_helper.rb": [
@@ -44,6 +45,8 @@
         1,
         1,
         null,
+        1,
+        1,
         1,
         1,
         1,
@@ -549,6 +552,8 @@
         1,
         1,
         1,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/airbnb/app/models/user.rb": [
@@ -558,9 +563,67 @@
         1,
         null,
         1,
+        1,
         null
       ],
       "/Users/Guest/Desktop/airbnb/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb/spec/features/review_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb/spec/models/listing_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb/app/models/listing.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb/spec/models/review_spec.rb": [
+        1,
+        null,
+        1,
+        2,
+        2,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb/app/models/review.rb": [
+        1,
+        1,
         1,
         null
       ],
@@ -568,7 +631,8 @@
         1,
         null,
         1,
-        null,
+        2,
+        2,
         null
       ],
       "/Users/Guest/Desktop/airbnb/app/controllers/listings_controller.rb": [
@@ -591,12 +655,13 @@
         null,
         null,
         1,
-        0,
+        3,
         null,
         null,
         1,
         1,
         2,
+        null,
         null,
         null
       ],
@@ -609,18 +674,40 @@
         1,
         null,
         1,
-        5,
+        6,
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/models/listing.rb": [
+      "/Users/Guest/Desktop/airbnb/app/controllers/reviews_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
         1,
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1436376743
+    "timestamp": 1436381501
   }
 }

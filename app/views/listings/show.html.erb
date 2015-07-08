@@ -1,0 +1,30 @@
+<div>
+  <%= @listing.name %>
+  <%= @listing.description%>
+  <%= @listing.price%>
+  <%= @listing.guest_number%>
+  <%= @listing.toilet%>
+  <%= @listing.shower%>
+  <%= @listing.outlet%>
+  <%= @listing.pets%>
+  <%= image_tag @listing.image.url(:medium) %>
+  <% @listing.average_rating.times do %>
+    <span class="glyphicon glyphicon-star rating"></span>
+  <% end %>
+</div>
+
+<%= link_to "Add Review", new_listing_review_path(@listing) %>
+
+<hr>
+
+<h4>Reviews</h4>
+<ul>
+  <% @listing.reviews.each do |review| %>
+    <li><%= review.text %>
+      <% review.rating.times do %>
+        <span class="glyphicon glyphicon-star rating"></span>
+      <% end %>
+    </li>
+
+  <% end %>
+</ul>

@@ -4,6 +4,11 @@
 
 <ul>
   <% @listings.each do |listing| %>
-    <li> <%= link_to listing.name, listing_path(listing) %> </li>
+    <li>
+      <div>
+        <%= image_tag listing.image.url(:thumb) %>
+      </div>
+      <%= link_to listing.name, listing_path(listing) %>
+    </li>
   <% end %>
 </ul>
