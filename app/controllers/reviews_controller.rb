@@ -20,6 +20,25 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def edit
+    @listing = Listing.find(params[:listing_id])
+    @review = Review.find(params[:id])
+  end
+
+  def update
+    @listing = Listing.find(params[:listing_id])
+    @review = Review.find(params[:id])
+    @review.update(review_params)
+    redirect_to listing_path(@listing)
+  end
+
+  def destroy
+    @listing = Listing.find(params[:listing_id])
+    @review = Review.find(params[:id])
+    @review.delete
+    redirect_to listing_path(@listing)
+  end
+
   private
   def review_params
     params.require(:review).permit(:text, :rating)

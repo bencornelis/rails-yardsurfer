@@ -35,3 +35,53 @@ describe "adding a listing" do
   end
 
 end
+
+describe "editing a listing" do
+  it "lets a logged in user edit a listing they posted" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    listing = FactoryGirl.create(:listing)
+    user.listings << listing
+    visit listing_path(listing)
+    click_on "Edit Listing"
+    fill_in "Location", with: "eugene"
+    click_on "Submit"
+    expect(page).to have_content("eugene")
+  end
+
+  it "lets an admin edit any listing" do
+    user = FactoryGirl.create(:user)
+    listing = FactoryGirl.create(:listing)
+    user.listings << listing
+    admin = FactoryGirl.create(:admin)
+    login_as(admin, :scope => :user)
+    visit listing_path(listing)
+    click_on "Edit Listing"
+    fill_in "Name", with: "test name"
+    click_on "Submit"
+    expect(page).to have_content "test name"
+  end
+end
+
+describe "deleting a listing" do
+  it "lets a user delete a listing they posted" do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    listing = FactoryGirl.create(:listing)
+    user.listings << listing
+    visit listing_path(listing)
+    click_on "Delete Listing"
+    expect(page).to have_no_content listing.name
+  end
+
+  it "lets an admin delete any listing" do
+    user = FactoryGirl.create(:user)
+    listing = FactoryGirl.create(:listing)
+    user.listings << listing
+    admin = FactoryGirl.create(:admin)
+    login_as(admin, :scope => :user)
+    visit listing_path(listing)
+    click_on "Delete Listing"
+    expect(page).to have_no_content listing.name
+  end
+end

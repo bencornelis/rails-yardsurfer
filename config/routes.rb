@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
   root to: "listings#index"
+  resources :users
   resources :listings do
     resources :reviews
   end
