@@ -12,6 +12,8 @@ describe "adding a listing" do
     fill_in "Name", with: "test lawn"
     fill_in "Location", with: "portland"
     click_on "Submit"
+    fill_in "search_string", with: "portland"
+    click_on "Search"
     expect(page).to have_content("test lawn")
   end
 

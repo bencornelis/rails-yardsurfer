@@ -13,4 +13,11 @@ class Listing < ActiveRecord::Base
     reviews.average(:rating).to_i
   end
 
+  def self.search(search_string)
+    location_results = self.basic_search(location: search_string)
+  end
+
+  def self.most_popular(number)
+    self.all.sort_by { |listing| -listing.fans.count }[0...number]
+  end
 end

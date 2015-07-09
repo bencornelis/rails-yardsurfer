@@ -2,14 +2,22 @@ class ListingsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
 
   def index
-    @listings = Listing.all
+    @search_string = params[:search_string]
+    if params[:slider]
+      # refine search
+      @price_range = params[:slider].split(",").map { |endpoint| endpoint.to_i }
+      @search_results = Listing.search(@search_string).select { |listing|
+         listing.price && listing.price.between?(@price_range[0], @price_range[1]) }
+    else
+      @search_results = Listing.search(@search_string)
+    end
   end
 
   def create
     listing = current_user.listings.new(listing_params)
     if listing.save
       flash[:notice] = "You've created a listing"
-      redirect_to listings_path
+      redirect_to listing_path(listing)
     else
       flash[:alert] = "There was an error"
       redirect_to :back
