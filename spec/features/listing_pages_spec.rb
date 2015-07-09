@@ -8,12 +8,12 @@ describe "adding a listing" do
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
     click_on "Log in"
-    click_on "Create Listing"
+    click_on "List Your Space"
     fill_in "Name", with: "test lawn"
     fill_in "Location", with: "portland"
     click_on "Submit"
-    fill_in "search_string", with: "portland"
-    click_on "Search"
+    # fill_in "search_string", with: "portland"
+    # find("#search_string").native.send_keys(:return)
     expect(page).to have_content("test lawn")
   end
 
@@ -30,7 +30,7 @@ describe "adding a listing" do
     fill_in "Email", with: user.email
     fill_in "Password", with: user.password
     click_on "Log in"
-    click_on "Create Listing"
+    click_on "List Your Space"
     fill_in "Name", with: ""
     click_on "Submit"
     expect(page).to have_content("There was an error")

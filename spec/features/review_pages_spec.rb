@@ -4,7 +4,9 @@ describe 'adding a review' do
   it "lets a logged in user to add a review to a listing" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
+    another_user = FactoryGirl.create(:another_user)
     listing = FactoryGirl.create(:listing)
+    another_user.listings << listing
     visit listing_path(listing)
     click_on "Add Review"
     fill_in "Text", with: "test review"
@@ -14,7 +16,9 @@ describe 'adding a review' do
 
   it "does not let a user add a review unless logged in" do
     user = FactoryGirl.create(:user)
+    another_user = FactoryGirl.create(:another_user)
     listing = FactoryGirl.create(:listing)
+    another_user.listings << listing
     visit listing_path(listing)
     click_on "Add Review"
     expect(page).to have_content("You need to sign in or sign up before continuing.")
@@ -25,7 +29,9 @@ describe "editing a review" do
   it "lets a logged in user edit a listing they posted" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
+    another_user = FactoryGirl.create(:another_user)
     listing = FactoryGirl.create(:listing)
+    another_user.listings << listing
     review = FactoryGirl.create(:review)
     user.reviews << review
     listing.reviews << review
@@ -38,8 +44,10 @@ describe "editing a review" do
 
   it "lets an admin edit any review" do
     user = FactoryGirl.create(:user)
+    another_user = FactoryGirl.create(:another_user)
     listing = FactoryGirl.create(:listing)
     review = FactoryGirl.create(:review)
+    another_user.listings << listing
     listing.reviews << review
     user.reviews << review
     admin = FactoryGirl.create(:admin)
@@ -56,8 +64,10 @@ describe "deleting a review" do
   it "lets a user delete a review they posted" do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
+    another_user = FactoryGirl.create(:another_user)
     listing = FactoryGirl.create(:listing)
     review = FactoryGirl.create(:review)
+    another_user.listings << listing
     user.reviews << review
     listing.reviews << review
     visit listing_path(listing)
@@ -68,7 +78,9 @@ describe "deleting a review" do
   it "lets an admin delete any review" do
     user = FactoryGirl.create(:user)
     listing = FactoryGirl.create(:listing)
+    another_user = FactoryGirl.create(:another_user)
     review = FactoryGirl.create(:review)
+    another_user.listings << listing
     listing.reviews << review
     user.reviews << review
     admin = FactoryGirl.create(:admin)

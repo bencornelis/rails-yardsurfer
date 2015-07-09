@@ -55,7 +55,7 @@
         <%= link_to "Add Review", new_listing_review_path(@listing), class: "btn btn-success pull-right" %>
     </h4>
     <hr>
-    <ul>
+    <ul class="list-unstyled">
       <% @listing.reviews.each do |review| %>
         <li>
           <%= image_tag review.user.avatar.url(:thumb), :class => "img-circle", :width => "60px" %>
