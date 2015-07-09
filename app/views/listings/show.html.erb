@@ -1,10 +1,12 @@
-<% if @listing.user == current_user || current_user.admin? %>
-  <%= link_to "Edit Listing", edit_listing_path(@listing) %>
-  <%= link_to "Delete Listing", listing_path(@listing), method: :delete %>
-<% else %>
-  <%= link_to "Add as Favorite", favorites_path(favorite: {user_id: current_user.id,
-                                                          listing_id: @listing.id}),
-                                                           method: :post %>
+<% if user_signed_in? %>
+  <% if @listing.user == current_user || current_user.admin? %>
+    <%= link_to "Edit Listing", edit_listing_path(@listing) %>
+    <%= link_to "Delete Listing", listing_path(@listing), method: :delete %>
+  <% elsif !current_user.favorited?(@listing) %>
+    <%= link_to "Add as Favorite", favorites_path(favorite: {user_id: current_user.id,
+                                                            listing_id: @listing.id}),
+                                                             method: :post %>
+  <% end %>
 <% end %>
 
 <div>
@@ -21,7 +23,9 @@
   <% @listing.rating.times do %>
     <span class="glyphicon glyphicon-star rating"></span>
   <% end %>
+  <%= @listing.fans.count %>
 </div>
+
 
 <%= link_to "Add Review", new_listing_review_path(@listing) %>
 
@@ -34,9 +38,11 @@
       <%= image_tag review.user.avatar.url(:thumb), :class => "img-circle" %>
       <%= review.user.name %>
       <%= render "layouts/rating", rateable: review %>
-      <% if review.user == current_user || current_user.admin? %>
-        <%= link_to "Edit Review", edit_listing_review_path(@listing, review) %>
-        <%= link_to "Delete Review", listing_review_path(@listing, review), method: :delete %>
+      <% if user_signed_in? %>
+        <% if review.user == current_user || current_user.admin? %>
+          <%= link_to "Edit Review", edit_listing_review_path(@listing, review) %>
+          <%= link_to "Delete Review", listing_review_path(@listing, review), method: :delete %>
+        <% end %>
       <% end %>
     </li>
 

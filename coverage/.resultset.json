@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/Guest/Desktop/airbnb/spec/features/listing_pages_spec.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/spec/features/listing_pages_spec.rb": [
         1,
         null,
         1,
@@ -90,7 +90,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/spec/rails_helper.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/spec/rails_helper.rb": [
         null,
         1,
         1,
@@ -149,14 +149,14 @@
         1,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/environment.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/airbnb/config/application.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/application.rb": [
         1,
         null,
         1,
@@ -193,12 +193,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/boot.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/boot.rb": [
         1,
         null,
         1
       ],
-      "/Users/Guest/Desktop/airbnb/config/environments/test.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/environments/test.rb": [
         1,
         null,
         null,
@@ -242,7 +242,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/assets.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -255,7 +255,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/backtrace_silencers.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -264,12 +264,12 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/cookies_serializer.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/devise.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/devise.rb": [
         null,
         null,
         1,
@@ -536,13 +536,13 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/filter_parameter_logging.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/inflections.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -560,18 +560,18 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/mime_types.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/session_store.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/Guest/Desktop/airbnb/config/initializers/wrap_parameters.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -587,7 +587,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/spec/factories.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/spec/factories.rb": [
         1,
         1,
         1,
@@ -611,7 +611,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/models/user.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/models/user.rb": [
         1,
         null,
         null,
@@ -620,112 +620,113 @@
         1,
         1,
         1,
-        null,
-        1,
         1,
         null,
-        null
-      ],
-      "/Users/Guest/Desktop/airbnb/config/routes.rb": [
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        null
-      ],
-      "/Users/Guest/Desktop/airbnb/app/helpers/application_helper.rb": [
-        1,
-        null
-      ],
-      "/Users/Guest/Desktop/airbnb/spec/features/review_pages_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/spec/models/listing_spec.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/config/routes.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb_clone/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb_clone/spec/features/review_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/airbnb_clone/spec/models/listing_spec.rb": [
         1,
         null,
         1,
@@ -733,7 +734,8 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/models/listing.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/models/listing.rb": [
+        1,
         1,
         1,
         1,
@@ -750,7 +752,7 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/spec/models/review_spec.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/spec/models/review_spec.rb": [
         1,
         null,
         1,
@@ -758,13 +760,13 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/models/review.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/models/review.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/spec/models/user_spec.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/spec/models/user_spec.rb": [
         1,
         null,
         1,
@@ -773,7 +775,7 @@
         2,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/controllers/listings_controller.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/controllers/listings_controller.rb": [
         1,
         1,
         null,
@@ -819,14 +821,14 @@
         null,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/controllers/application_controller.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/Guest/Desktop/airbnb/app/controllers/reviews_controller.rb": [
+      "/Users/Guest/Desktop/airbnb_clone/app/controllers/reviews_controller.rb": [
         1,
         1,
         null,
@@ -873,8 +875,14 @@
         3,
         null,
         null
+      ],
+      "/Users/Guest/Desktop/airbnb_clone/app/models/favorite.rb": [
+        1,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1436399141
+    "timestamp": 1436458759
   }
 }
